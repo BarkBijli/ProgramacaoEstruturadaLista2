@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Use ponto "." para a altura.//
+
+float calcularIMC(float peso, float altura) {
+    if (altura <= 0) {
+        printf("A altura deve ser maior que zero.\n");
+        return -1;  // Retorna um valor inválido para indicar erro
+    }
+
+    float imc = peso / (altura * altura);
+    return imc;
+}
+
+int main() {
+    float peso, altura;
+
+    printf("Digite o peso em quilogramas: ");
+    scanf("%f", &peso);
+
+    printf("Digite a altura em metros: ");
+    scanf("%f", &altura);
+
+    float resultadoIMC = calcularIMC(peso, altura);
+
+    if (resultadoIMC != -1) {
+        printf("O IMC e: %.2f\n", resultadoIMC);
+    }
+
+    return 0;
+}
