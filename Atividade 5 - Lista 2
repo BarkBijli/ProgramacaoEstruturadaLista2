@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.1414592
+
+double calcularVolumeEsfera(double raio) {
+    double volume = (4.0 / 3.0) * PI * pow(raio, 3);
+    return volume;
+}
+
+int main() {
+    double raio, volume;
+    
+    printf("Digite o raio da esfera: ");
+    scanf("%lf", &raio);
+    
+    volume = calcularVolumeEsfera(raio);
+    
+    printf("O volume da esfera e: %.2lf\n", volume);
+    
+    return 0;
+}
